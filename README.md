@@ -9,7 +9,7 @@
 
 | Roll No          | Name          |
 | ---------------- | ------------- |
-| AM.SC.U4CSE25261 | Adithya Dev   |
+| AM.SC.U4CSE25261 | Adithyadev   |
 | AM.SC.U4CSE25265 | Nived Krishna |
 | AM.SC.U4CSE25260 | Dhanesh       |
 | AM.SC.U4CSE25266 | Abhishek      |
@@ -64,7 +64,7 @@ java Main
 | ---------- | -------- | --------- |
 | Admin      | admin01  | adminpass |
 | Student    | iamAD    | AD01      |
-| Instructor | inst01   | profnair  |
+| Instructor | inst01   | pramod123 |
 
 ---
 
