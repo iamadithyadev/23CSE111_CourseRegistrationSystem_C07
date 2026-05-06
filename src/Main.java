@@ -9,8 +9,8 @@ public class Main {
 
         // username and password now passed to User via super()
         Admin admin           = new Admin("admin01", "Admin User", "admin01", "adminpass");
-        Instructor instructor1 = new Instructor("inst01", "Dr. Sharma", "drsharma", "sharma123");
-        Instructor instructor2 = new Instructor("inst02", "Prof. Nair", "profnair", "nair456");
+        Instructor instructor1 = new Instructor("inst01","Pramod", "iamPR", "pramod123");
+        Instructor instructor2 = new Instructor("inst02", "Sreedeep", "iamSR", "sree123");
 
         Student student1 = new Student("AM.SC.U4CSE25261", "Adithyadev",
                 "am.sc.u4cse25261@am.students.amrita.edu", "iamAD", "AD01");
@@ -21,7 +21,7 @@ public class Main {
         System.out.println("--- USE CASE: Login ---");
         System.out.println("Student login:    " + student1.login("iamAD", "AD01"));
         System.out.println("Admin login:      " + admin.login("admin01", "adminpass"));
-        System.out.println("Instructor login: " + instructor1.login("drsharma", "sharma123"));
+        System.out.println("Instructor login: " + instructor1.login("iamPR", "pramod123"));
         System.out.println("Invalid login:    " + student2.login("wrongUser", "wrongPass"));
         System.out.println();
 
@@ -52,7 +52,7 @@ public class Main {
 
         // Search Course
         System.out.println("--- USE CASE: Search Course ---");
-        Course found = catalog.searchCourse("CS102");
+        Course found = catalog.searchCourse("23CSE111");
         if (found != null) System.out.println("Found: " + found.viewCourseDetails());
         catalog.searchCourse("CS999");
         System.out.println();
@@ -64,18 +64,18 @@ public class Main {
 
         //Register (Duplicate)
         System.out.println("--- USE CASE: Register Same Course Again (Duplicate Check) ---");
-        student1.registerCourse("CS101", catalog);
+        student1.registerCourse("23CSE111", catalog);
         System.out.println();
 
         //Register (No Seats)
         System.out.println("--- USE CASE: Register for Course (No Seats) ---");
-        student1.registerCourse("CS103", catalog);
+        student1.registerCourse("23CSE103", catalog);
         System.out.println();
 
         //Register (Credit Limit)
         System.out.println("--- USE CASE: Register Multiple Courses (Credit Limit Check) ---");
-        student1.registerCourse("CS102", catalog);
-        student1.registerCourse("CS104", catalog);
+        student1.registerCourse("23CSE102", catalog);
+        student1.registerCourse("23CSE104", catalog);
         System.out.println();
 
         //View Registered Courses
@@ -85,13 +85,13 @@ public class Main {
 
         // --- Drop Course ---
         System.out.println("--- USE CASE: Drop Course ---");
-        student1.dropCourse("CS101", catalog);
+        student1.dropCourse("23CSE111", catalog);
         System.out.println("Seats in CS101 after drop: " + oop.getSeatsAvailable());
         System.out.println();
 
         //Drop Not Registered
         System.out.println("--- Drop Course Not Registered ---");
-        student1.dropCourse("CS103", catalog);
+        student1.dropCourse("23CSE103", catalog);
         System.out.println();
 
         // Instructor Views Assigned Courses
@@ -110,7 +110,7 @@ public class Main {
 
         //Remove Course
         System.out.println("--- USE CASE: Admin Removes Course ---");
-        admin.removeCourse("CS103", catalog);
+        admin.removeCourse("23CSE103", catalog);
         catalog.displayCourses();
         System.out.println();
 
