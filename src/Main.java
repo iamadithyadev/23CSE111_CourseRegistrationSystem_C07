@@ -27,10 +27,10 @@ public class Main {
 
         // --- Add Courses ---
         System.out.println("--- USE CASE: Admin Adds Courses ---");
-        Course oop  = new Course("CS101", "Object Oriented Programming", 4, 3);
-        Course dsa  = new Course("CS102", "Data Structures and Algorithms", 4, 1);
-        Course dbms = new Course("CS103", "Database Management Systems", 3, 0);
-        Course os   = new Course("CS104", "Operating Systems", 3, 5);
+        Course oop  = new Course("23CSE111", "Object Oriented Programming", 4, 3);
+        Course dsa  = new Course("23CSE102", "Data Structures and Algorithms", 4, 1);
+        Course dbms = new Course("23CSE103", "Database Management Systems", 3, 0);
+        Course os   = new Course("23CSE104", "Operating Systems", 3, 5);
         admin.addCourse(oop,  catalog);
         admin.addCourse(dsa,  catalog);
         admin.addCourse(dbms, catalog);
@@ -59,7 +59,7 @@ public class Main {
 
         //Register (Seats Available)
         System.out.println("--- USE CASE: Register for Course (Seats Available) ---");
-        student1.registerCourse("CS101", catalog);
+        student1.registerCourse("23CSE101", catalog);
         System.out.println();
 
         //Register (Duplicate)
