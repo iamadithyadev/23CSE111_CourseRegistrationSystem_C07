@@ -124,7 +124,7 @@ Enter Password: AD01
 
 #### Input
 ```text
-Enter Course ID: CS101
+Enter Course ID: 23CSE111
 Enter Course Name: Object Oriented Programming
 Enter Credits: 4
 Enter Seats Available: 3
@@ -141,12 +141,12 @@ Enter Seats Available: 3
 
 #### Input
 ```text
-Enter Course ID to search: CS101
+Enter Course ID to search: 23CSE111
 ```
 
 #### Output
 ```text
-Found: Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=3}
+Found: Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=3}
 ```
 
 ---
@@ -155,7 +155,7 @@ Found: Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=3
 
 #### Input
 ```text
-Enter Course ID to register: CS101
+Enter Course ID to register: 23CSE111
 ```
 
 #### Output
@@ -169,7 +169,7 @@ Enter Course ID to register: CS101
 
 #### Output
 ```text
-[FAILURE] Already registered for course: CS101
+[FAILURE] Already registered for course: 23CSE111
 ```
 
 ---
@@ -178,7 +178,7 @@ Enter Course ID to register: CS101
 
 #### Output
 ```text
-[FAILURE] No seats available for course: CS101
+[FAILURE] No seats available for course: 23CSE111
 ```
 
 ---
@@ -187,7 +187,7 @@ Enter Course ID to register: CS101
 
 #### Output
 ```text
-Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=2}
+Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=2}
 ```
 
 ---
@@ -196,12 +196,12 @@ Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=2}
 
 #### Input
 ```text
-Enter Course ID to drop: CS101
+Enter Course ID to drop: 23CSE111
 ```
 
 #### Output
 ```text
-[Drop Successful] Adithyadev dropped course: CS101
+[Drop Successful] Adithyadev dropped course: 23CSE111
 ```
 
 ---
@@ -210,7 +210,7 @@ Enter Course ID to drop: CS101
 
 #### Input
 ```text
-Enter Course ID to assign instructor: CS101
+Enter Course ID to assign instructor: 23CSE111
 Choose Instructor: 1
 ```
 
@@ -232,7 +232,7 @@ Choose: 1
 ```text
 Pramod's Assigned Courses:
 
-Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=2, Instructor='Pramod'}
+Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=2, Instructor='Pramod'}
 ```
 
 ---
