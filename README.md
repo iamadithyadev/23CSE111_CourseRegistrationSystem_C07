@@ -21,22 +21,25 @@
 
 Managing course registration manually in educational institutions is time-consuming and prone to errors such as duplicate entries, incorrect seat allocation, and poor record management. This project implements a Course Registration System using Java to automate and streamline the process.
 
-The system supports three types of users: Admin, Student, and Instructor. The Admin can add, update, and remove courses, as well as assign instructors. Students can register for courses, drop courses, and view their registered courses based on seat availability. Instructors can view the courses assigned to them.
+The system supports three types of users: Admin, Student, and Instructor. The Admin can add, update, and remove courses, as well as assign instructors. Students can register for courses, drop courses, search available courses, and view their registered courses based on seat availability. Instructors can view the courses assigned to them.
 
-The system ensures proper validation by preventing duplicate registrations, checking seat limits before enrollment, and maintaining registration records with status tracking (ACTIVE/CANCELLED).
+The system ensures proper validation by preventing duplicate registrations, checking seat limits before enrollment, and maintaining organized course records.
 
 ---
 
 ## ⚙️ Features
 
 - User login system
+- Separate menus for Admin, Student, and Instructor
 - Course creation and removal by Admin
+- Course update functionality
 - Instructor assignment
 - Student course registration and drop
 - Seat availability validation
 - Duplicate registration prevention
+- Course search functionality
 - View registered courses
-- Registration status tracking
+- Instructor assigned course viewing
 
 ---
 
@@ -64,7 +67,9 @@ java Main
 |------|----------|----------|
 | Admin | admin01 | adminpass |
 | Student | iamAD | AD01 |
-| Instructor | inst01 | pramod123 |
+| Student | abhishek266 | AB01 |
+| Instructor | iamPR | pramod123 |
+| Instructor | iamSR | sree123 |
 
 ---
 
@@ -95,7 +100,6 @@ java Main
 
 ### Registration.java
 - Tracks student registrations
-- Maintains registration status
 
 ---
 
@@ -105,46 +109,58 @@ java Main
 
 #### Input
 ```text
-Student login
-Username: iamAD
-Password: AD01
+Enter Username: iamAD
+Enter Password: AD01
 ```
 
 #### Output
 ```text
-Student login: true
+[Login Successful] Welcome Adithyadev!
 ```
 
 ---
 
-### 📚 Add Course
+### 📚 Add Course (Admin)
 
 #### Input
 ```text
-Course ID: 23CSE111
-Course Name: Object Oriented Programming
-Credits: 4
-Seats: 3
+Enter Course ID: CS101
+Enter Course Name: Object Oriented Programming
+Enter Credits: 4
+Enter Seats Available: 3
 ```
 
 #### Output
 ```text
-[Admin] Course added: Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=3, Instructor='Not Assigned'}
+[Admin] Course added successfully.
 ```
 
 ---
 
-### 📝 Register Course
+### 🔍 Search Course
 
 #### Input
 ```text
-Student registers for course: CS101
+Enter Course ID to search: CS101
 ```
 
 #### Output
 ```text
-Registration entry created: REG001
-[SUCCESS] Adithya Dev registered for course: Object Oriented Programming
+Found: Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=3}
+```
+
+---
+
+### 📝 Register for Course
+
+#### Input
+```text
+Enter Course ID to register: CS101
+```
+
+#### Output
+```text
+[SUCCESS] Adithyadev registered for course: Object Oriented Programming
 ```
 
 ---
@@ -153,7 +169,7 @@ Registration entry created: REG001
 
 #### Output
 ```text
-[FAILURE] Already registered for course: 23CSE111
+[FAILURE] Already registered for course: CS101
 ```
 
 ---
@@ -162,7 +178,7 @@ Registration entry created: REG001
 
 #### Output
 ```text
-[FAILURE] No seats available for course: Database Management Systems
+[FAILURE] No seats available for course: CS101
 ```
 
 ---
@@ -171,16 +187,36 @@ Registration entry created: REG001
 
 #### Output
 ```text
-Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=2, Instructor='Pramod'}
+Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=2}
 ```
 
 ---
 
 ### 🗑️ Drop Course
 
+#### Input
+```text
+Enter Course ID to drop: CS101
+```
+
 #### Output
 ```text
-[Drop Successful] Adithyadev dropped course: 23CSE111
+[Drop Successful] Adithyadev dropped course: CS101
+```
+
+---
+
+### 👨‍🏫 Assign Instructor
+
+#### Input
+```text
+Enter Course ID to assign instructor: CS101
+Choose Instructor: 1
+```
+
+#### Output
+```text
+Instructor assigned successfully.
 ```
 
 ---
@@ -189,22 +225,23 @@ Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=2, In
 
 #### Input
 ```text
-Instructor views assigned courses
+Choose: 1
 ```
 
 #### Output
 ```text
-Course{ID='23CSE111', Name='Object Oriented Programming', Credits=4, Seats=2, Instructor='Pramod'}
+Pramod's Assigned Courses:
 
-Course{ID='23CSE102', Name='Data Structures and Algorithms', Credits=4, Seats=0, Instructor='Pramod'}
+Course{ID='CS101', Name='Object Oriented Programming', Credits=4, Seats=2, Instructor='Pramod'}
 ```
+
+---
 
 ## 📂 Project Structure
 
 ```text
 /Phase1        → Phase 1 documentation
 /Phase2        → Phase 2 documentation
-/Phase3        → Phase 3 documentation
 /src           → Java source code
 /output        → Output screenshots
 README.md      → Documentation
@@ -221,7 +258,7 @@ README.md      → Documentation
 | Abstraction | Base User class |
 | ArrayList | Store courses and registrations |
 | Validation Checks | Prevent duplicate registration and invalid operations |
-| Java Collections | Manage dynamic data 
+| Java Collections | Manage dynamic data |
 
 ---
 
@@ -235,4 +272,4 @@ README.md      → Documentation
 
 ## ✅ Conclusion
 
-This project demonstrates how a real-world course registration system can be implemented using Java and Object-Oriented Programming principles. It provides a structured and efficient way to manage users, courses, and registrations while reducing manual errors and improving data handling.
+This project demonstrates how a real-world course registration system can be implemented using Java and Object-Oriented Programming principles. It provides a structured and efficient way to manage users, courses, and registrations while reducing manual errors and improving data handlin
